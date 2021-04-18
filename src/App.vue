@@ -68,7 +68,7 @@
         { title: 'Customers', url:"/customer-list" },
         { title: 'Investments', url:"/investment-list" },
         { title: 'Stocks', url:"/stock-list" },
-        { title: 'Funds', url:"/fund-list" },
+        { title: 'Mutual Funds', url:"/fund-list" },
       ]
     }),
     mounted() {
