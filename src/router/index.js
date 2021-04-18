@@ -10,6 +10,7 @@ import StockList from '@/components/StockList'
 import StockCreate from '@/components/StockCreate'
 import FundList from '@/components/FundList'
 import FundCreate from '@/components/FundCreate'
+import Signup from '@/components/Signup'
 
 Vue.use(Router)
 
@@ -107,6 +108,11 @@ export default new Router({
       path: '/auth',
       name: 'Auth',
       component: Auth
+    },
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: Signup
     }
   ]
 })

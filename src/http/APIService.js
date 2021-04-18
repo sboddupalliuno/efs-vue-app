@@ -32,9 +32,6 @@ export class APIService {
     return axios.get(url, {headers: {Authorization: `jwt ${jwtToken}`}});
  }
 
-
-
-
   addNewCustomer(customer){
    const url = `${API_URL}/api/customers/`;
    let jwtToken = localStorage.getItem('token');
@@ -169,5 +166,10 @@ export class APIService {
   signup(credentials) {
     const url = `${API_URL}/auth/`;
     return axios.post(url, credentials);
+  }
+
+  registerUser(user){
+    const url = `${API_URL}/register/`;
+    return axios.post(url,user);
   }
 }

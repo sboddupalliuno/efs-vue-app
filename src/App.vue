@@ -17,7 +17,9 @@
         <v-btn flat dark text rounded v-if="!authenticated"
                 @click="login">Log in
         </v-btn>
-
+        <v-btn flat dark text rounded v-if="!authenticated"
+                @click="signup">Sign up
+        </v-btn>
         <v-btn flat dark text rounded v-if="authenticated"
                 @click="logout">Log Out
         </v-btn>
@@ -41,6 +43,8 @@
           >{{ item.title }}</v-list-item>
           <v-list-item v-if="!authenticated"
           @click="login">Log in</v-list-item>
+          <v-list-item v-if="!authenticated"
+          @click="signup">Sign up</v-list-item>
           <v-list-item v-if="authenticated"
           @click="logout">Log out</v-list-item>
         </v-list>
@@ -95,6 +99,9 @@
       },
       login() {
         router.push("/auth");
+      },
+      signup() {
+        router.push("/signup");
       },
     }
   };
