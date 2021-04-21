@@ -54,7 +54,7 @@
                     label="Description"
                     required
                     />
-                    
+
                     <v-text-field
                     v-model="Fund.purchase_price"
                     label="Purchase Price"
@@ -69,14 +69,14 @@
                     />
                     <v-text-field
                     v-model="Fund.recent_value"
-                    label="Recent Value"
-                    required
+                    label="Current Value"
+                    disabled
                     type="number"
                     />
                     <v-text-field
                     v-model="Fund.recent_date"
-                    label="Recent Date"
-                    required
+                    label="Current Date"
+                    disabled
                     type="date"
                     />
                 </v-container>
@@ -87,7 +87,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-        </v-row>  
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
@@ -124,7 +124,6 @@
     },
     methods: {
       getCustomers() {
-        
         apiService.getCustomerList().then(response => {
           this.customers = response.data.data;
           if (localStorage.getItem("isAuthenticates")

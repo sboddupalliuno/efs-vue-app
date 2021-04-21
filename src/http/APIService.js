@@ -1,10 +1,10 @@
 /* eslint-disable */
 import axios from 'axios';
 // const API_URL = 'http://localhost:8000'; /* http://groyce.pythonanywhere.com or http://localhost:8000 */
-const API_URL = 'https://sboddupalli-efs-rest.herokuapp.com';
+// const API_URL = 'https://sboddupalli-efs-rest.herokuapp.com';
+const API_URL = 'http://127.0.0.1:8000';
 export class APIService {
   constructor() {
-
   }
 
    getCustomer(param_pk) {
@@ -163,12 +163,7 @@ export class APIService {
     return axios.post(url, credentials);
   }
 
-  signup(credentials) {
-    const url = `${API_URL}/auth/`;
-    return axios.post(url, credentials);
-  }
-
-  registerUser(user){
+  signupUser(user){
     const url = `${API_URL}/register/`;
     return axios.post(url,user);
   }
